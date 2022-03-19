@@ -3,7 +3,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>{{ $sPageTitle ?? 'AdminLTE Dashboard' }}</title>
+    <title>{{ $sPageTitle ?? 'Kinaxia Dashboard' }}</title>
       
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
       
