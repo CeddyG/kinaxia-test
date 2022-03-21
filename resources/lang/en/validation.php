@@ -91,6 +91,7 @@ return [
         'array'     => 'The :attribute must have at least :min items.',
     ],
     'not_enough_money'      => 'This company hasn\'t enough money.',
+    'not_enough_stock'      => 'This product hasn\'t enough stock.',
     'not_in'                => 'The selected :attribute is invalid.',
     'not_regex'             => 'The :attribute format is invalid.',
     'numeric'               => 'The :attribute must be a number.',

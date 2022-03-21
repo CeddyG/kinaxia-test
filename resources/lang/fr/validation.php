@@ -91,6 +91,7 @@ return [
         'array'   => 'Le tableau :attribute doit contenir au moins :min éléments.',
     ],
     'not_enough_money'      => 'Cette entreprise n\'a pas suffisamment de fonds.',
+    'not_enough_stock'      => 'Ce produit n\'a pas suffisamment de stock.',
     'not_in'                => 'Le champ :attribute sélectionné n\'est pas valide.',
     'not_regex'             => 'Le format du champ :attribute est invalide.',
     'numeric'               => 'Le champ :attribute doit contenir un nombre.',

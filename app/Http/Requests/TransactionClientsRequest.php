@@ -4,6 +4,8 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
+use App\Rules\EnoughStock;
+
 class TransactionClientsRequest extends FormRequest
 {
     /**
@@ -24,7 +26,14 @@ class TransactionClientsRequest extends FormRequest
     public function rules()
     {
         return [
-            'id' => 'numeric',            'company_id' => 'numeric',            'client_id' => 'numeric',            'product_id' => 'numeric',            'employee_id' => 'numeric',            'quantity' => 'numeric',            'created_at' => 'string',            'updated_at' => 'string'
+            'id' => 'numeric',
+            'company_id' => 'required|numeric|exists:companies,id',
+            'client_id' => 'required|numeric|exists:clients,id',
+            'product_id' => 'required|numeric|exists:products,id',
+            'employee_id' => 'required|numeric|exists:employees,id',
+            'quantity' => ['numeric', new EnoughStock($this->product_id)],
+            'created_at' => 'string',
+            'updated_at' => 'string'
         ];
     }
 }
