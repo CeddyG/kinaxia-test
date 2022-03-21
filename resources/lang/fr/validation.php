@@ -90,6 +90,7 @@ return [
         'string'  => 'Le texte :attribute doit contenir au moins :min caractères.',
         'array'   => 'Le tableau :attribute doit contenir au moins :min éléments.',
     ],
+    'not_enough_money'      => 'Cette entreprise n\'a pas suffisamment de fonds.',
     'not_in'                => 'Le champ :attribute sélectionné n\'est pas valide.',
     'not_regex'             => 'Le format du champ :attribute est invalide.',
     'numeric'               => 'Le champ :attribute doit contenir un nombre.',

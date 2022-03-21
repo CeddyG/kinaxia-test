@@ -19,6 +19,15 @@ class EventServiceProvider extends ServiceProvider
             SendEmailVerificationNotification::class,
         ],
     ];
+    
+    /**
+     * The subscriber classes to register.
+     *
+     * @var array
+     */
+    protected $subscribe = [
+        \App\Listeners\CompaniesSubscriber::class,
+    ];
 
     /**
      * Register any events for your application.

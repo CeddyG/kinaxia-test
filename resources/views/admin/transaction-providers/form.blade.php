@@ -39,11 +39,8 @@
                             {!! BootForm::select(trans('companies.companies'), 'company_id')
                                 ->class('select2 form-control')
                                 ->options([$oItem->company_id => $oItem->companies->name])
-                                ->data([
-                                    'url-select'    => route('api.admin.companies.select'), 
-                                    'url-create'    => route('admin.companies.create'),
-                                    'field'         => 'name'
-                            ]) !!}
+                                ->disabled()
+                                !!}
                         @else
                             {!! BootForm::select(trans('companies.companies'), 'company_id')
                                 ->class('select2 form-control')
@@ -59,11 +56,8 @@
                             {!! BootForm::select(trans('providers.providers'), 'provider_id')
                                 ->class('select2 form-control')
                                 ->options([$oItem->provider_id => $oItem->providers->name])
-                                ->data([
-                                    'url-select'    => route('api.admin.providers.select'), 
-                                    'url-create'    => route('admin.providers.create'),
-                                    'field'         => 'name'
-                            ]) !!}
+                                ->disabled()
+                                !!}
                         @else
                             {!! BootForm::select(trans('providers.providers'), 'provider_id')
                                 ->class('select2 form-control')
@@ -79,11 +73,8 @@
                             {!! BootForm::select(trans('products.products'), 'product_id')
                                 ->class('select2 form-control')
                                 ->options([$oItem->product_id => $oItem->products->name])
-                                ->data([
-                                    'url-select'    => route('api.admin.products.select'), 
-                                    'url-create'    => route('admin.products.create'),
-                                    'field'         => 'name'
-                            ]) !!}
+                                ->disabled()
+                                !!}
                         @else
                             {!! BootForm::select(trans('products.products'), 'product_id')
                                 ->class('select2 form-control')
@@ -114,9 +105,9 @@
                             ]) !!}
                         @endif
 
-                        {!! BootForm::text(__('transaction-providers.quantity'), 'quantity') !!}
+                        {!! BootForm::text(__('transaction-providers.quantity'), 'quantity')->disabled(isset($oItem)) !!}
 
-                    {!! BootForm::submit('Envoyer', 'btn-primary')->addClass('pull-right') !!}
+                        {!! BootForm::submit('Envoyer', 'btn-primary')->addClass('pull-right') !!}
 
                     {!! BootForm::close() !!}
                 </div>

@@ -8,6 +8,8 @@ use App\Repositories\TransactionProvidersRepository;
 
 class TransactionProvidersController extends ContentManagerController
 {
+    protected $sEventAfterStore = \App\Events\TransactionProviders\AfterStoreEvent::class;
+    
     public function __construct(TransactionProvidersRepository $oRepository)
     {
         $this->sPath            = 'admin/transaction-providers';

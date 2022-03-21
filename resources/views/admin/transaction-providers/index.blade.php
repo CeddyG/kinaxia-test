@@ -89,24 +89,12 @@
 
                             return render;
                         }
-                    },
-                    {
-                        "data": "id",
-                        "render": function ( data, type, row, meta ) {
-
-                            var render = '{!! BootForm::open()->action( route("admin.transaction-providers.destroy", "dummyId") )->attribute("onsubmit", "return confirm(\'Vraiment supprimer cet objet ?\')")->delete() !!}'
-                                +'{!! BootForm::submit("Supprimer", "btn-danger")->addClass("btn-block btn-xs") !!}'
-                                +'{!! BootForm::close() !!}';
-                            render = render.replace("dummyId", data);
-
-                            return render;
-                        }
                     }
                 ], 
                 aoColumnDefs: [
                     {
                         bSortable: false,
-                        aTargets: [ -1, -2 ]
+                        aTargets: [ -1 ]
                     }
                 ],
                 "language": {
