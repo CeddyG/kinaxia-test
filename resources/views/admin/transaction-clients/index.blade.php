@@ -31,7 +31,6 @@
                         <th>{{ __('transaction-clients.quantity') }}</th>
                         <th>{{ __('transaction-clients.employee_id') }}</th>
                         <th></th>
-                        <th></th>
                     </tr>
                     </thead>
                 </table>
@@ -85,18 +84,6 @@
                         "render": function ( data, type, row, meta ) {
 
                             var render = "{!! Button::warning('Modifier')->asLinkTo(route('admin.transaction-clients.edit', 'dummyId'))->extraSmall()->block()->render() !!}";
-                            render = render.replace("dummyId", data);
-
-                            return render;
-                        }
-                    },
-                    {
-                        "data": "id",
-                        "render": function ( data, type, row, meta ) {
-
-                            var render = '{!! BootForm::open()->action( route("admin.transaction-clients.destroy", "dummyId") )->attribute("onsubmit", "return confirm(\'Vraiment supprimer cet objet ?\')")->delete() !!}'
-                                +'{!! BootForm::submit("Supprimer", "btn-danger")->addClass("btn-block btn-xs") !!}'
-                                +'{!! BootForm::close() !!}';
                             render = render.replace("dummyId", data);
 
                             return render;
